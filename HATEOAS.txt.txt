@@ -1,0 +1,5 @@
+HATEOAS singkatan dari Hypermedia as the Engine of Application State
+Hypermedia artinya content yang memiliki link menuju resource yang ada
+
+Biasanya URL API pada RESTful API sudah di hardcore di Client
+Dengan menggunakan HATEOAS, client bisa secara dinamis mendapatkan URL lokasi resource dari response data Server
