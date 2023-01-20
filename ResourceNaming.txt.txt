@@ -1,0 +1,56 @@
+Pembuatan URL RESTful API sendiri tidak ada standar baku nya, namun alangkah baiknya mengikuti best practive yang ada
+Resource dalam RESTful API adalah data yang sifatnya bisa satu atau banyak
+Misal. "customers" adalah kumpulan dari "customer" dimana "customer" adalah satu data customer.
+
+GUNAKAN KATA BENDA, BUKAN KATA KERJA
+Contoh BENAR :
+!. http://api.example.com/products
+2. http://api.example.com/members
+
+Contoh SALAH :
+1. http://api.example.com/get-all-products
+2. http://api.example.com/select-members-table
+
+GUNAKAN HIRARKI
+Contoh BENAR :
+1. http://api.example.com/products/{productld}/images
+2. http://api.example.com/merchants/{merchantld}/addresses
+
+Contoh SALAH :
+!. http://api.example.com/product-images/{productld}
+2. http://api.example.com/merchant-addresses/{merchantld}
+
+GUNAKAN ACTION PADA RESOURCE
+Contoh BENAR :
+1. http://api.example.com/users/login
+2. http://api.example.com/users/forget-password
+
+Contoh SALAH :
+1. http://api.example.com/login-user
+2. http://api.example.com/forget-password-user
+
+GUNAKAN - DAN LOWERCASE
+Contoh BENAR :
+1. http://api.example.com/products/{productld}/warehouse-location
+
+Contoh SALAH :
+1. http://api.example.com/products/{productld}/warehouse_location
+2. http://api.example.com/products/{productld}/warehouseLocation
+
+GUNAKAN CRUD PADA HTTP METHOD
+Contoh BENAR :
+1. GET http://api.example.com/products/{productld}
+2. POST http://api.example.com/products
+
+Contoh SALAH :
+1. GET http://api.example.com/get-products-by-id/{productld}
+2. POST http://api.example.com/create-product
+
+GUNAKAN QUERY UNTUK FILTER
+Contoh BENAR :
+!. http://api.example.com/products?name=Indomie
+2. http://api.example.com/products?name=Indomie&page=10
+
+Contoh SALAH :
+1. http://api.example.com/products/page/1
+2. http://api.example.com/products/filter-by-name/{name}
