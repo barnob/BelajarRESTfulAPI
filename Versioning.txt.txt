@@ -1,0 +1,18 @@
+Saat membuat RESTful API, usahakan tidak pernah merusak kompatibilitas tiap kita  melakukan upgrade
+Versioning hanya diperlukan ketika kita memang perlu merusak kompatibilitas RESTful API
+Namun sebisa mungkin jangan melakukan ini, karena cost nya sangat mahal di sisi client
+Namun jika memang harus dilakukan, maka wajib merlakukan versioning pada RESTful API
+
+Banyak cara melakukan versioning pada RESTful API
+memberi tahu bahwa memiliki banyak versi terhadap aplikasi RESTful API
+Client bisa memilih versi yang akan digunakan
+
+http://api.example.com/v1/products
+http://api.example.com/v2/products
+http://api.example.com/2019/products
+http://api.example.com/2020/products
+
+HTTP Header => API-Version:1
+HTTP Header => API-Version:2
+HTTP Header => X-API-Version:2019
+HTTP Header => X-API-Version:2020
