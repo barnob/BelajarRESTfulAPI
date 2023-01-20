@@ -1,0 +1,13 @@
+Secara sederhana cache adalah data bersifat sementara yang disimpan pada sistem penyimpanan.
+Dalam RESTful API, data cache biasanya disimpan di Client ( misa di WEB browser, dan mobile app )
+Cache biasanya digunakan untuk menurunkan jumlah data transfer antara client dan server sehingga proses komunikasi lebih cepat
+
+HTTP Header ETag dignakan untuk menambah informasi terhadap resource yang dikembalikan di server
+ETag berisikan versi dari resource yang diminta, misal :
+ETag:"33a64df551425fcc55e4d42a148795d9f25f89d4"
+
+Setelah client menyimpan data cache, setiap client mengirim request ke server, client akan menambah HTTP Header If-Not-Match
+HTTP Header If-Not-Match berisikan data ETag
+Jika data tidak berubah, maka server akan mengembalikan HTTP Response Code 304 : Not Modified
+If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+
