@@ -1,0 +1,22 @@
+Leonard Richardson telah melakukan analisa banyak sekali WEB Service, dan akhirnya menyimpulkan dalam 4 kategori, seberapa sempurna RESTful API
+https://www.crummy.com/writing/speaking/2008-QCon/act3.html
+1. Level Zero
+2. Level One
+3. Level Two
+4. Level Three
+
+Pada Level ZERO, biasanya WEB service dibuat hanya menggunakan satu URL dan satu HTTP Method
+Contoh adalah SOAP dan XML-RPC, biasanya hanya menggunakan satu URL dan HTTP Method POST saja untuk semua API
+Jika masih menggunakan teknik seperti ini, artinya masih berada di Level Zero
+
+Jika kita sudah menggunakan banyak URL ketika membuat WEB Service, namun masih selalu menggunakan satu HTTP Method, maka kita berada di level ONE
+Biasanya WEB Service versi lama masih menggunakan format seperti ini, biasanya menggunakan POST
+
+Ini adalah level dimana kebanyakan WEB Service saat ini
+Banyak URL, dan tiap URL biasanya mendukung satu atau lebih jenis HTTP Method
+Misal URL yang sama, menggunakan GET untuk mengambil data, dan POST untuk menambah data
+Jika kita sudah melakukan ini, artinya kita sudah berada di LVL TWO
+
+Level Three atau paling tinggi sebenarnya mirip dengan level TWO, yang membedakan adalah pada level three setiap resorce akan memberikan detail relasi ke resource lain, atau singkatnya adalah sudah mengimplementasikan HATEOAS
+Level three ini agak menyulitkan ketika diimplementasikan, dan kebanyakan programmer hanya berhenti di level Two
+Dengan mengimplementasikan HATEOAS, kita bisa dengan mudah mendapatkan URL resource ke relasi data yang kita butuhkan
