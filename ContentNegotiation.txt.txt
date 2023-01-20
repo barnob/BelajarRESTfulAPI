@@ -1,0 +1,26 @@
+Saat membuat WEB menggunakan HTTP, maka biasanya content(Body) yang akan kita gunakan akan menggunakan HTML
+Pada RESTful API pun, untuk berkomunikasi antara Client dan Server, biasanya menggunakan Body
+Ada banyak sekali Body Content yang biasa digunakan di RESTful API, seperti JSON (JavaScript Object Notation),XML,dll
+Namun yang paling populer dan banyak digunakan saat ini adalah JSON
+
+Sama seperti pada HTTP, untuk melakukan content negotiation, pada RESTful API akan menggunakan standard HTTP Header : Accept dan Content Type
+Accept digunakan untuk memberi tahu Server, tentang tipe data yang diterima oleh Client
+Content-Type digunakan untuk memberi tahu Server,tipe data apa yang dikirim oleh Client
+
+JSON singkatan dari JavaScript Object Notation
+JSON adalah tipe data object pada JavaScript
+https://www.json.org/
+
+JSON sangat populer digunakan dalam pembuatan RESTful API saat ini
+JSON tidak hanya mudah dibuat dalam JavaScript, namun hampir disemua bahasa pemrograman
+Data JSON sangat mudah dibuat dan juga dimengerti oleh manusia
+Data JSON juga sangat ringan, dan cocok digunakan sebagai data komunikasi antara Client dan Server
+
+Tidak seperti SOAP yang format Request dan Response nya sudah ditentukan, menggunakan RESTful API tidak ada standar baku dalam membuat request dan response
+Menggunakan JSON jika tidak dibuat dengan baik bisa terlalu liar, karena memang bisa dibuat sesuka kita
+Disarankan untuk membuat standard request dan response agar tidak membingungkan ketika menggunakan RESTful API yang kita buat
+Response JSON yang dinamis akan sangat menyulitkan client terutama yang menggunakan bahasa pemrograman static typed
+
+Selalu gunakan response status code yang sesuai dengan Standarisasi HTTP
+Misal jika sukses, gunakan Status 2xx
+Jika data yang dikirim oleh client tidak valid, gunakan 4xx dan jika terjadi masalah di server, gunakan 5xx
