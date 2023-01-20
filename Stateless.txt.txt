@@ -1,0 +1,10 @@
+Stateless sederhananya tidak menyimpan state atau data
+RESTful API yang baik tidak pernah menyimpan state atau data antar request
+Setiap request dari client, harus berisikan semua informasi lengkap yang dibutuhkan oleh server
+Client bertanggung jawab menyimpan dan melakukan manajemen state yang berhubungan dengan client
+stateless artinya setiap HTTP Request adalah proses independent
+Server tidak bole bergantung pada Request dari clientsebelumnya
+
+RESTful API yang stateless akan mudah di scaling secara horizontal
+Karena tidak perlu tahu state sebelumnya yang sangat kompleks
+setiap request client akan sangat lengkap
