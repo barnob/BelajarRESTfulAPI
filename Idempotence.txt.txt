@@ -1,0 +1,22 @@
+Dalam RESTful API, ketika membuat multiple request yang identik, harus memiliki efek yang sama seperti membuat satu request. Dalam hal ini, maka RESTful API kita bisa dibilang idempotent.
+Idempotent itu sangat penting, karena saat membuat RESTful API, kita akan melakukan komunikasi antara client dan server via network, sehingga error bisa terjadi.
+Belum lagi, banyak framework atau library client yang bisa secara otomatis melakukan request ulang ketika terjadi error pada network
+Saat implementasi RESTful API sesuai  kaidah HTTP Method yang standar, secara otomatis sebenarnya kita sudah melakukan proses idempotent.
+
+Umumnya, pada POST, kita tidak perlu membuat API nya menjadi idempotent. Request berkali-kali menggunakan POST dengan data yg sama
+Namun hal ini kadang berbahaya, misal terjadi kesalahan client mengirim dua data yang sama, maka akan jadi 2 record di server, padahal awalnya hanya mau buat 1 record.
+Hal ini bisa selesai dengan trik id record baru dikirim dari client, tidak menggunakan auto generate atau auto increment.
+Optimal pada POST implementasi idempotent tidak diwajibkan
+
+Method GET tidak pernah mengubah data di server. Method GET hanya digunakan untuk mengambil data yang ada di server
+Jadi mengirim request GET berkali-kali ke server tidak akan mengubah data apapun di server
+
+Method PUT & PATCH digunakan untuk mengubah data yang sudah ada
+Jika kita request PUT & PATCH berkali-kali dengan data sama, maka server akan proses update data
+Request pertama akan mengubah data di database, request selanjutnya hanya mengubah data request pertama
+Oleh karena itu PUT & PATCH bisa dibilang idempotent
+
+Method DELETE digunakan untuk menghapus data
+Ketika kita mengirim perintah DELETE berkali-kali mungkin response nya akan berbeda
+Response pertama mungkin 200 OK atau 204 No Content, selanjutnya bisa jadi 404 Not Found
+Walaupun secara  response mungkin berbeda, namun sebenarnya DELETE sudah secara default idempotent.
