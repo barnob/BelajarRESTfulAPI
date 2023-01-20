@@ -1,0 +1,15 @@
+RESTful API tidak memiliki standar baku seperti SOAP sehingga untuk memudahkan client dalam menggunakan RESTful API yang kita buat
+Dokumentasi RESTful API bisa dibuat menggunakan apapun dari dokumen sederhana menggunakan microsoft word,google doc, sampai menggunakan tool khusus untuk dokumentasi API
+Sangat disarankan untuk menggunakan tool khusus dokumentasi API
+
+CONTOH API DOC :
+1. Swagger
+2. Stoplight
+3. Redoc, dll
+
+OpenAPI adalah spesifikasi yang banyak diadopsi oleh industri untuk mendeskripsikan API
+https://www.openapis.org/
+Contoh OpenAPI : https://github.com/OAI/OpenAPI-Specification/tree/master/examples/v3.0
+
+Standard, sehingga bisa dibuat oleh programmer bahasa pemrograman apapun
+Mudah digunakan oleh client, karena sudah banyak tersediagenerator untuk melakukan generate kode client dari OpenAPI Spesification
