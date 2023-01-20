@@ -1,0 +1,31 @@
+Ada saatnya kita butuh mengamankan RESTful API yang dibuat
+Atau ingin membatasi pihak yang boleh mengakses RESTful API
+Salah satunya dengan menggunakan Authentication dan Authorization
+
+AUTHENTICATION :
+1. Memvalidasi kredensial untuk memverifikasi pemilik identitas
+2. Contoh proses Authentication adalah proses login menggunakan username dan password
+AUTHORIZATION :
+1. Authorization adalah proses yang dilakukan setelah proses Authentication
+2. Memvalidasi apakah pemilik identitas hak akses untuk mengakses resource yang diminta
+3. Contoh proses adalah Accwss-Control List, dll
+
+CONTOH AUTHENTICATION & AUTHORIZATION 
+1. Basic Auth
+2. API-Key
+3. Oauth 2, dll
+
+AUTHENTICATION menggunakan username dan password cukup menggunakan Header AUTHORIZATION
+https://tools.left.org/html/rfc7617
+CONTOH :
+AUTHORIZATION : Basic base64(user:pw)
+
+AUTHORIZATION sederhana menggunakan API-Key atau Secret Key
+Cukup pake Header sesuai dengan yang diinginkan dan value berisi API-Key atau Secret Key
+CONTOH :
+API-Key : random-api-key-irnod2i3unr8qy78n8nrf83ufior2u3fior
+
+mekanisme Authenti dan authori yang saat ini sangat populer
+banyak digunakan untuk integrasi antara apk mobile dan Server
+https://tools.ielf.org/html/rfc6749
+https://tools.ielf.org/html/rfc6750
