@@ -1,0 +1,18 @@
+API singkatan dari Application Programming Interface
+API adalah perantara yang menghubungkan satu pihak dengan pihak lain agar bisa saling berkomunikasi
+API berisi kumpulan prosedur, fungsi, cara berkomunikasi atau peralatan untuk komunikasi
+Pihak yang terlibat dalam API bisa dalam bentuk perangkat lunak ataupun perangkat keras
+API sebenarnya sama dengan Remote Procedure Invocation, hanya saja sekarang lebih populer istilah API dibanding RPI
+
+Saat kita menggunakan sistem operasi, sistem operasi tidak bisa langsung berkomunikasi denngan perangkat keras, sistem operasi membutuhkan API berupa driver yang perlu dipasang terlebih dahulu agar perangkat keras bisa terdeteksi oleh sistem operasi
+Saat kita ingin berkomunikasi dengan aplikasi Facebook, kita membutuhkan API dari Facebook agar aplikasi kita bisa berinteraksi dengan aplikasi Facebook, dll
+
+Ada banyak sekali Implementasi API yang terdapat di dunia nyata ketika kita membuat aplikasi, misalnya :
+1. Driver Perangkat Keras, sebagai API untuk sistem operasi
+2. SOAP ( Simple Object Access Protocol )
+3. CORBA ( Common Object Request Broker Architecture )
+4. RESTful API
+5. Apache Thrift
+6. Protocol Buffer
+7. GRPC , dll
+
