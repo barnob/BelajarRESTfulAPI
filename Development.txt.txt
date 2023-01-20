@@ -1,0 +1,44 @@
+Selalu membuat CRUB API untuk table di database
+Membuat response data sama dengan table database
+Membuat API terlebih dahulu, baru mengerjakan WEB atau Mobile menggunakan API yang sudah dibuat
+Mengembalikan data selengkapnya di API
+Membuat API yang tidak dibutuhkan oleh Client
+
+Tahapan Membuat RESTful API :
+BUSINESS FLOW => UI/UX SCREEN => API DOCUMENTATION => DEVELOP RESTful API
+
+1. CUSTOMER menambahkan barang ke keranjang
+2. CUSTOMER membuka halaman keranjang
+3. CUSTOMER memasukan alamat pengirim
+4. CUSTOMER menekan tombol order untuk buat order
+5. dst
+
+Product Detail :
+1. GET/products/{productld}
+2. POST/carts
+Shopping Cart :
+1. GET/carts
+2. PATCH/carts/products
+3. PATCH/carts/products/{productld}
+Shipping Address :
+1. GET/addresses
+2. POST/addresses
+3. PUT/carts/addresses
+4. POST/orders
+Order Detail :
+1. GET/orders/{orderld}
+
+Dalam membuat produk, fitur akan selalu bertambah
+Tak jarang kita mungkin melakikan perubahan di screen WEB atau Mobile yang sama
+Maintenance RESTful API sangatlah penting, agar RESTful API kita tidak menjadi masalah di kemudian hari
+
+Menambah data baru di API yang sudah ada
+Menambah API baru di endpoint URL berbeda
+Mempercepat proses di API yang sudah ada
+Menggabungkan beberapa API menjadi satu, tanpa menghilangkan API lama
+
+Mengubah total response data di API yang sudah ada
+Merubah field response data di API yang sudah ada
+Menghilangkan API yang sudah ada
+men-split API yang sudah ada menjadi dua atau lebih
+Menggabungkan beberapa API menjadi satu dengan menghpaus API lama
